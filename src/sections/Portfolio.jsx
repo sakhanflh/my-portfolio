@@ -4,26 +4,10 @@ import CardProject from "../components/fragments/CardProject";
 import { CertificateCard } from "../components/fragments/CertificateCard";
 import TechStackIcon from "../components/fragments/TechStackCard";
 import { projectsData } from "../components/data/ProjectsData";
-
-// Components (dummy)
-
-// Dummy Data
+import { certificatesData } from "../components/data/CertificatesData";
+import { techStacksData } from "../components/data/TechStacksData";
 
 
-const certificatesData = [
-    { id: 1, Img: "cert1.png" },
-    { id: 2, Img: "cert2.png" },
-    { id: 3, Img: "cert3.png" },
-];
-
-const techStacks = [
-    { icon: "html.svg", language: "HTML" },
-    { icon: "css.svg", language: "CSS" },
-    { icon: "javascript.svg", language: "JavaScript" },
-    { icon: "tailwind.svg", language: "Tailwind CSS" },
-    { icon: "react.svg", language: "ReactJS" },
-    { icon: "node.svg", language: "Node.js" },
-];
 
 const ToggleButton = ({ onClick, isShowingMore }) => (
     <button
@@ -75,14 +59,12 @@ export function Portfolio() {
 
     return (
         <div
-            className=" w-full mt-32 bg-[#030014] overflow-hidden"
+            className="w-full mt-32"
             id="Portofolio"
         >
             {/* Header */}
             <div
                 className="text-center pb-10"
-                data-aos="fade-up"
-                data-aos-duration="1000"
             >
                 <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto gradient-text">
                     Portfolio Showcase
@@ -178,7 +160,7 @@ export function Portfolio() {
 
             {activeTab === 2 && (
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-                    {techStacks.map((stack, index) => (
+                    {techStacksData.map((stack, index) => (
                         <div
                             key={index}
                             data-aos={

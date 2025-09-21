@@ -4,7 +4,7 @@ export default function CardProject({ Img, Title, Description, Link, scroll }) {
     return (
         <div className="group bg-white/5 border border-white/10 rounded-xl p-4 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
             {/* Screenshot container */}
-            <div className="h-80 overflow-hidden rounded-lg mb-4 relative">
+            <div className="h-72 overflow-hidden rounded-lg mb-4 relative">
                 <img
                     src={Img}
                     alt={Title}
@@ -31,7 +31,7 @@ export default function CardProject({ Img, Title, Description, Link, scroll }) {
                         rel="noopener noreferrer"
                         className="group/link"
                     >
-                        <span className="flex items-center gap-2 text-purple-500/70 font-semibold group-hover/link:text-purple-500 transition-colors duration-300">
+                        <span className="flex items-center gap-2 text-purple-400/70 font-semibold group-hover/link:text-purple-500 transition-colors duration-300">
                             <p>Live Demo</p>
                             <FaExternalLinkAlt className="group-hover/link:rotate-45 transform transition-transform duration-300" />
                         </span>
