@@ -141,7 +141,7 @@ export function About() {
                             </div>
 
                             <blockquote className="text-gray-300 text-center lg:text-left italic font-medium text-sm relative z-10 pl-6">
-                                "Leveraging AI as a professional tool, not a replacement."
+                                "Just coding, keep growing, and always keep learning."
                             </blockquote>
                         </div>
                         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">

@@ -46,7 +46,7 @@ export function Portfolio() {
     const [showAllCertificates, setShowAllCertificates] = useState(false);
 
     const isMobile = window.innerWidth < 768;
-    const initialItems = isMobile ? 4 : 6;
+    const initialItems = isMobile ? 3 : 4;
 
 
     const displayedProjects = showAllProjects

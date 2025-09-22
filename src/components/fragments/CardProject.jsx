@@ -1,6 +1,8 @@
 import { FaArrowRight, FaExternalLinkAlt } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-export default function CardProject({ Img, Title, Description, Link, scroll }) {
+export default function CardProject({ Img, Title, Description, Link, scroll, id }) {
+    const navigate = useNavigate()
     return (
         <div className="group bg-white/5 border border-white/10 rounded-xl p-4 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
             {/* Screenshot container */}
@@ -38,7 +40,10 @@ export default function CardProject({ Img, Title, Description, Link, scroll }) {
                     </a>
                 )}
 
-                <button className="flex items-center gap-2 py-1 px-3 rounded-lg bg-gray-600/30 hover:bg-gray-600/50 hover:scale-105 transition-all duration-300 text-slate-400 hover:text-slate-100">
+                <button
+                    onClick={() => navigate(`/project/${id}`)}
+                    className="flex items-center gap-2 py-1 px-3 rounded-lg bg-gray-600/30 hover:bg-gray-600/50 hover:scale-105 transition-all duration-300 text-slate-400 hover:text-slate-100"
+                >
                     <p className="transition-all duration-300">Details</p>
                     <FaArrowRight />
                 </button>

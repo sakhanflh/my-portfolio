@@ -1,8 +1,48 @@
-import { FaMailBulk, FaUser } from "react-icons/fa";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { memo, useState } from "react";
+import { FaDiscord, FaGithub, FaInstagram, FaLinkedin, FaMailBulk, FaUser } from "react-icons/fa";
 import { LuMessageSquare, LuSend, LuShare2 } from "react-icons/lu";
 import { MdEmail } from "react-icons/md";
+import { SiGmail } from "react-icons/si";
+
 
 export function Contact() {
+    const [isHovering, setIsHovering] = useState(false)
+    const lottieOptions = {
+        src: "/mail.lottie",
+        loop: true,
+        autoplay: true,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice',
+            progressiveLoad: true,
+        },
+        style: { width: "100%", height: "100%" },
+        className: `w-full h-full transition-all duration-500 ${isHovering
+            ? "scale-[180%] sm:scale-[160%] md:scale-[150%] lg:scale-[145%] rotate-2"
+            : "scale-[175%] sm:scale-[155%] md:scale-[145%] lg:scale-[140%]"
+            }`
+    };
+
+    const SocialLink = memo(({ icon: Icon, link, text }) => (
+        <a href={link} target="_blank" rel="noopener noreferrer" className="group">
+            <button className="relative p-3">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-500  to-cyan-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
+                <div className="relative rounded-xl bg-black/50 backdrop-blur-xl p-2 flex items-center justify-center border border-white/10 group-hover:border-white/20 transition-all duration-300">
+                    <Icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" />
+                </div>
+            </button>
+            <p className="text-center text-gray-400 transition-colors font-medium gradient-text contrast-60 group-hover:contrast-120">{text}</p>
+        </a>
+    ));
+
+    const SOCIAL_LINKS = [
+        { icon: FaGithub, link: "https://github.com/sakhanflh",text: "GitHub" },
+        { icon: FaLinkedin, link: "https://www.linkedin.com/in/sakha-naufal-huda-94996a242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app", text: "LinkedIn" },
+        { icon: FaInstagram, link: "https://www.instagram.com/sakhanflh?igsh=MWx0a2pucWZ6b2E4eg==", text: "Instagram" },
+        { icon: FaDiscord, link: "https://discord.gg/wXsRHUsP", text: "Discord" },
+        { icon: SiGmail, link: "mailto:sakhanaufal2@gmail.com", text: "Gmail" },
+
+    ];
     return (
         <div className="mt-30">
             <div
@@ -80,8 +120,18 @@ export function Contact() {
                     </form>
 
                 </div>
-                <div className="w-1/2 border">
-                    <p>tes</p>
+                <div className="w-1/2 flex flex-col justify-center gap-10">
+                    <div>
+                        <DotLottieReact {...lottieOptions} />
+                    </div>
+                    <div className="">
+                        <p className="text-3xl italic gradient-text font-medium contrast-60 hover:contrast-120 transition-all duration-300">“Let’s work together to build something amazing!”</p>
+                    </div>
+                    <div className="hidden sm:flex gap-5 justify-start">
+                        {SOCIAL_LINKS.map((social, index) => (
+                            <SocialLink key={index} {...social} />
+                        ))}
+                    </div>
                 </div>
             </div>
 

@@ -2,9 +2,10 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import TextType from "../components/fragments/TextType";
 import { memo, useState } from "react";
 import CTAButton from "../components/fragments/CTAButton";
-import { FaCode, FaExternalLinkAlt, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaCode, FaDiscord, FaExternalLinkAlt, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import RotatingText from "../components/fragments/RotatingText";
+import { SiGmail } from "react-icons/si";
 
 export function Hero() {
     const [isHovering, setIsHovering] = useState(false)
@@ -36,8 +37,9 @@ export function Hero() {
 
     const SOCIAL_LINKS = [
         { icon: FaGithub, link: "https://github.com/sakhanflh" },
-        { icon: FaLinkedin, link: "https://www.linkedin.com/in/ekizr/" },
-        { icon: FaInstagram, link: "https://www.instagram.com/ekizr._/?hl=id" }
+        { icon: FaLinkedin, link: "https://www.linkedin.com/in/sakha-naufal-huda-94996a242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+        { icon: FaInstagram, link: "https://www.instagram.com/sakhanflh?igsh=MWx0a2pucWZ6b2E4eg==" },
+        { icon: SiGmail, link: "mailto:sakhanaufal2@gmail.com"},
     ];
 
 
