@@ -59,7 +59,7 @@ export function Portfolio() {
 
     return (
         <div
-            className="w-full mt-32"
+            className="w-full mt-32 overflow-x-hidden md:overflow-x-visible"
             id="Portofolio"
         >
             {/* Header */}
@@ -86,7 +86,7 @@ export function Portfolio() {
                     <button
                         key={index}
                         onClick={() => setActiveTab(index)}
-                        className={`flex items-center gap-2 px-4 py-3 md:px-5 md:py-2 rounded-lg font-semibold transition-all duration-300 ${activeTab === index
+                        className={`flex text-sm md:text-base items-center gap-2 px-4 py-2 md:px-5 md:py-2 rounded-lg font-semibold transition-all duration-300 ${activeTab === index
                             ? "bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-white shadow-lg"
                             : "text-slate-400 hover:text-white hover:bg-white/5"
                             }`}

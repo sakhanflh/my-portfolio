@@ -110,7 +110,7 @@ export function About() {
         },
     ], []);
     return (
-        <div className="mt-32 md:mt-20" id="About">
+        <div className="mt-32 md:mt-20 overflow-x-hidden md:overflow-x-visible" id="About">
             <div className="text-center ">
                 <h1 className="text-5xl font-semibold gradient-text inline-block">About Me</h1>
                 <span className="flex items-center gap-2 text-center justify-center">

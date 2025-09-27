@@ -44,7 +44,7 @@ export function Contact() {
 
     ];
     return (
-        <div className="mt-30" id="Contact">
+        <div className="mt-30 overflow-x-hidden md:overflow-x-visible" id="Contact">
             <div
                 className="text-center pb-10"
             >
@@ -127,7 +127,7 @@ export function Contact() {
                     <div className="">
                         <p className="text-xl md:text-3xl italic gradient-text font-medium contrast-60 hover:contrast-120 transition-all duration-300">“Let’s work together to build something amazing!”</p>
                     </div>
-                    <div className="flex gap-5 justify-start">
+                    <div className="hidden lg:flex gap-5 justify-start">
                         {SOCIAL_LINKS.map((social, index) => (
                             <SocialLink key={index} {...social} />
                         ))}
