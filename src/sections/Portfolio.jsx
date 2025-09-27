@@ -59,7 +59,7 @@ export function Portfolio() {
 
     return (
         <div
-            className="w-full mt-32 overflow-x-hidden md:overflow-x-visible"
+            className="w-full mt-32"
             id="Portofolio"
         >
             {/* Header */}

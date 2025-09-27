@@ -44,7 +44,7 @@ export function Hero() {
 
 
     return (
-        <div className="flex mt-20 overflow-x-hidden md:overflow-x-visible space-y-5 flex-col md:flex-row items-center md:justify-beetween" id="Home"> 
+        <div className="flex mt-20  space-y-5 flex-col md:flex-row items-center md:justify-beetween" id="Home"> 
             <div className="w-full md:w-1/2 space-y-5">
                 <div className="flex items-center gap-2">
                     <h2 className="font-semibold">Creative</h2>
@@ -93,7 +93,7 @@ export function Hero() {
                     ))}
                 </div>
             </div>
-            <div className="md:w-1/2 flex justify-center w-full items-center">
+            <div className="md:w-1/2 overflow-hidden flex justify-center w-full items-center">
                 <div className="">
                     <DotLottieReact {...lottieOptions} />
                 </div>

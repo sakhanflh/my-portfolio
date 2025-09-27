@@ -44,7 +44,7 @@ export function Contact() {
 
     ];
     return (
-        <div className="mt-30 overflow-x-hidden md:overflow-x-visible" id="Contact">
+        <div className="mt-30 " id="Contact">
             <div
                 className="text-center pb-10"
             >
