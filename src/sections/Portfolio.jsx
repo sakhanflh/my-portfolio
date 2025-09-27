@@ -60,7 +60,7 @@ export function Portfolio() {
     return (
         <div
             className="w-full mt-32"
-            id="Portofolio"
+            id="Portfolio"
         >
             {/* Header */}
             <div

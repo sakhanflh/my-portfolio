@@ -62,10 +62,10 @@ export function Contact() {
                 >
                     <div className="flex justify-between items-start mb-8">
                         <div>
-                            <h2 className="text-4xl font-bold mb-3 gradient-text inline-block">
+                            <h2 className="text-3xl md:text-4xl font-bold mb-3 gradient-text inline-block">
                                 Get in touch.
                             </h2>
-                            <p className="text-gray-400">
+                            <p className="text-gray-400 text-sm md:text-base">
                                 Anything you'd like to discuss? Send me a message and let's talk.
                             </p>
                         </div>

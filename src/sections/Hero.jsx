@@ -75,7 +75,7 @@ export function Hero() {
                             key={tech}
                             className="relative px-[2px] py-[2px] rounded-2xl bg-gradient-to-r from-purple-500/30 to-cyan-500/30 hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 "
                         >
-                            <span className="block rounded-2xl px-3 py-2 md:px-5 md:py-2 bg-black text-white text-sm hover:bg-black/80">
+                            <span className="block rounded-xl md:rounded-2xl px-4 py-2 md:px-5 md:py-2 bg-black text-white text-sm hover:bg-black/80">
                                 {tech}
                             </span>
                         </span>
@@ -83,8 +83,8 @@ export function Hero() {
                 </div>
 
                 <div className="flex gap-3 justify-center md:justify-start">
-                    <CTAButton href="#portfolio" text="Projects" icon={FaCode} />
-                    <CTAButton href="#contact" text="Contact" icon={HiMail} />
+                    <CTAButton href="#Portfolio" text="Projects" icon={FaCode} />
+                    <CTAButton href="#Contact" text="Contact" icon={HiMail} />
                 </div>
 
                 <div className="hidden sm:flex gap-4 justify-start">
@@ -93,7 +93,7 @@ export function Hero() {
                     ))}
                 </div>
             </div>
-            <div className="md:w-1/2 overflow-hidden flex justify-center w-full items-center">
+            <div className="md:w-1/2 h-52 md:h-auto overflow-hidden flex justify-center w-full items-center">
                 <div className="">
                     <DotLottieReact {...lottieOptions} />
                 </div>

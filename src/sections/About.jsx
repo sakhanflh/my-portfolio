@@ -110,12 +110,12 @@ export function About() {
         },
     ], []);
     return (
-        <div className="mt-32 md:mt-20 " id="About">
+        <div className="mt-20 " id="About">
             <div className="text-center ">
-                <h1 className="text-5xl font-semibold gradient-text inline-block">About Me</h1>
+                <h1 className="text-3xl md:text-5xl font-semibold gradient-text inline-block">About Me</h1>
                 <span className="flex items-center gap-2 text-center justify-center">
                     <LuSparkles className="text-purple-400" />
-                    <p className="text-lg md:text-xl text-slate-300">Transforming ideas into digital experiences</p>
+                    <p className="text-sm md:text-xl text-slate-300">Transforming ideas into digital experiences</p>
                     <LuSparkles className="text-cyan-400" />
                 </span>
             </div>
@@ -124,11 +124,11 @@ export function About() {
             <div className="mt-8 md:mt-20">
                 <div className="flex flex-col-reverse md:flex-row relative">
                     <div className="w-full mt-10 md:mt-0 md:w-1/2">
-                        <span className="text-4xl md:text-5xl text-start font-semibold">
+                        <span className="text-3xl md:text-5xl text-start font-semibold">
                             <h2 className="gradient-text inline-block">Hello, I'm</h2>
                             <h2>Sakha Naufal Huda</h2>
                         </span>
-                        <p className="text-justify text-xl text-slate-400">I am an Informatics Engineering graduate with a strong interest in Front-End development. My focus is on creating engaging, responsive, and user-friendly digital experiences, while always striving to deliver the best solutions in every project I work on.</p>
+                        <p className="text-justify text-xl text-slate-400">I am an Informatics Engineering graduate with a strong interest in Front-End development. My focus is on creating engaging, responsive, and user friendly digital experiences, while always striving to deliver the best solutions in every project I work on.</p>
                         <div
                             className="relative bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5 border border-gradient-to-r border-[#6366f1]/30 rounded-2xl p-4 my-6 backdrop-blur-md shadow-2xl overflow-hidden"
                         >
