@@ -44,21 +44,21 @@ export function Contact() {
 
     ];
     return (
-        <div className="mt-30">
+        <div className="mt-30" id="Contact">
             <div
                 className="text-center pb-10"
             >
                 <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto gradient-text">
                     Contact Me
                 </h2>
-                <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
+                <p className="text-slate-400 max-w-2xl mx-auto mt-2">
                     Have something to discuss? Send me a message and let's talk.
                 </p>
             </div>
 
-            <div className="gap-20 flex">
+            <div className="gap-20 flex flex-col-reverse md:flex-row">
                 <div
-                    className="w-1/2 bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-500 hover:shadow-[#6366f1]/10"
+                    className="w-full md:w-1/2 bg-white/5 backdrop-blur-xl rounded-3xl shadow-2xl p-5 py-10 sm:p-10 transform transition-all duration-500 hover:shadow-[#6366f1]/10"
                 >
                     <div className="flex justify-between items-start mb-8">
                         <div>
@@ -120,14 +120,14 @@ export function Contact() {
                     </form>
 
                 </div>
-                <div className="w-1/2 flex flex-col justify-center gap-10">
+                <div className="w-full md:w-1/2 flex flex-col justify-center gap-10">
                     <div>
                         <DotLottieReact {...lottieOptions} />
                     </div>
                     <div className="">
-                        <p className="text-3xl italic gradient-text font-medium contrast-60 hover:contrast-120 transition-all duration-300">“Let’s work together to build something amazing!”</p>
+                        <p className="text-xl md:text-3xl italic gradient-text font-medium contrast-60 hover:contrast-120 transition-all duration-300">“Let’s work together to build something amazing!”</p>
                     </div>
-                    <div className="hidden sm:flex gap-5 justify-start">
+                    <div className="flex gap-5 justify-start">
                         {SOCIAL_LINKS.map((social, index) => (
                             <SocialLink key={index} {...social} />
                         ))}

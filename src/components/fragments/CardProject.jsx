@@ -6,7 +6,7 @@ export default function CardProject({ Img, Title, Description, Link, scroll, id 
     return (
         <div className="group bg-white/5 border border-white/10 rounded-xl p-4 hover:shadow-lg hover:shadow-purple-500/20 transition-all duration-300">
             {/* Screenshot container */}
-            <div className="h-72 overflow-hidden rounded-lg mb-4 relative">
+            <div className="h-52 md:h-72 overflow-hidden rounded-lg mb-4 relative">
                 <img
                     src={Img}
                     alt={Title}

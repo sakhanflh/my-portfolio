@@ -9,7 +9,7 @@ export function MainLayout({ children }) {
             <div className="flex-1">
                 <Header />
                 <MaxLayout>
-                    <main className="px-[5%]">{children}</main>
+                    <main className="px-[6%]">{children}</main>
                 </MaxLayout>
                 <Footer/>
             </div>

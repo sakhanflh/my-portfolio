@@ -77,7 +77,7 @@ export function Portfolio() {
             </div>
 
             {/* Tabs */}
-            <div className="flex justify-center gap-4 mb-8">
+            <div className="flex justify-center md:gap-4 mb-8">
                 {[
                     { icon: <FaCode />, label: "Projects" },
                     { icon: <FaAward />, label: "Certificates" },
@@ -86,7 +86,7 @@ export function Portfolio() {
                     <button
                         key={index}
                         onClick={() => setActiveTab(index)}
-                        className={`flex items-center gap-2 px-5 py-2 rounded-lg font-semibold transition-all duration-300 ${activeTab === index
+                        className={`flex items-center gap-2 px-4 py-3 md:px-5 md:py-2 rounded-lg font-semibold transition-all duration-300 ${activeTab === index
                             ? "bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-white shadow-lg"
                             : "text-slate-400 hover:text-white hover:bg-white/5"
                             }`}

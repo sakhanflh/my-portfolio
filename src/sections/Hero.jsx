@@ -44,8 +44,8 @@ export function Hero() {
 
 
     return (
-        <div className="flex items-center justify-beetween h-screen">
-            <div className="w-1/2 space-y-5">
+        <div className="flex mt-20 space-y-5 flex-col md:flex-row items-center md:justify-beetween" id="Home"> 
+            <div className="w-full md:w-1/2 space-y-5">
                 <div className="flex items-center gap-2">
                     <h2 className="font-semibold">Creative</h2>
                     <RotatingText
@@ -61,7 +61,7 @@ export function Hero() {
                         rotationInterval={3000}
                     />
                 </div>
-                <h1 className="text-7xl font-semibold">Frontend <br /> <span className="gradient-text">Developer</span></h1>
+                <h1 className="text-6xl lg:text-7xl font-semibold">Frontend <br /> <span className="gradient-text">Developer</span></h1>
                 <TextType
                     text={["Let's Build the Future Together", "Transforming Ideas into Digital Reality", "Code Today, Inspire Tomorrow"]}
                     typingSpeed={75}
@@ -69,20 +69,20 @@ export function Hero() {
                     showCursor={true}
                     cursorCharacter="|"
                 />
-                <div className="flex gap-2">
+                <div className="flex gap-2 flex-wrap">
                     {["React", "Javascript", "Node.js", "Tailwind"].map((tech) => (
                         <span
                             key={tech}
-                            className="relative px-[2px] py-[1px] rounded-2xl bg-gradient-to-r from-purple-500/30 to-cyan-500/30 hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 "
+                            className="relative px-[2px] py-[2px] rounded-2xl bg-gradient-to-r from-purple-500/30 to-cyan-500/30 hover:from-purple-500 hover:to-cyan-500 transition-all duration-300 "
                         >
-                            <span className="block rounded-2xl px-5 py-2 bg-black text-white text-sm hover:bg-black/80">
+                            <span className="block rounded-2xl px-3 py-2 md:px-5 md:py-2 bg-black text-white text-sm hover:bg-black/80">
                                 {tech}
                             </span>
                         </span>
                     ))}
                 </div>
 
-                <div className="flex gap-3">
+                <div className="flex gap-3 justify-center md:justify-start">
                     <CTAButton href="#portfolio" text="Projects" icon={FaCode} />
                     <CTAButton href="#contact" text="Contact" icon={HiMail} />
                 </div>
@@ -93,7 +93,7 @@ export function Hero() {
                     ))}
                 </div>
             </div>
-            <div className="w-1/2 ">
+            <div className="md:w-1/2 flex justify-center w-full items-center">
                 <div className="">
                     <DotLottieReact {...lottieOptions} />
                 </div>

@@ -110,21 +110,21 @@ export function About() {
         },
     ], []);
     return (
-        <div className="">
+        <div className="mt-32 md:mt-20" id="About">
             <div className="text-center ">
                 <h1 className="text-5xl font-semibold gradient-text inline-block">About Me</h1>
                 <span className="flex items-center gap-2 text-center justify-center">
                     <LuSparkles className="text-purple-400" />
-                    <p className="text-xl text-slate-300">Transforming ideas into digital experiences</p>
+                    <p className="text-lg md:text-xl text-slate-300">Transforming ideas into digital experiences</p>
                     <LuSparkles className="text-cyan-400" />
                 </span>
             </div>
 
 
-            <div className="mt-20">
-                <div className="flex relative">
-                    <div className="w-1/2">
-                        <span className="text-5xl font-semibold">
+            <div className="mt-8 md:mt-20">
+                <div className="flex flex-col-reverse md:flex-row relative">
+                    <div className="w-full mt-10 md:mt-0 md:w-1/2">
+                        <span className="text-4xl md:text-5xl text-start font-semibold">
                             <h2 className="gradient-text inline-block">Hello, I'm</h2>
                             <h2>Sakha Naufal Huda</h2>
                         </span>
@@ -163,7 +163,7 @@ export function About() {
                             </a>
                         </div>
                     </div>
-                    <div className="w-1/2">
+                    <div className="w-full md:w-1/2 flex justify-center">
                         <ProfileImage />
                     </div>
                 </div>
