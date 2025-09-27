@@ -121,7 +121,7 @@ export function Contact() {
 
                 </div>
                 <div className="w-full md:w-1/2 flex flex-col justify-center gap-10">
-                    <div>
+                    <div className="overflow-hidden">
                         <DotLottieReact {...lottieOptions} />
                     </div>
                     <div className="">
