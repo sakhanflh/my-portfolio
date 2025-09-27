@@ -1,12 +1,39 @@
-# React + Vite
+# 🌐 Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my **Personal Portfolio Website**, built to showcase my projects, skills, and experiences as a **Frontend Developer**.  
+The website is designed to be lightweight, responsive, and easy to maintain using a modern tech stack.
 
-Currently, two official plugins are available:
+## 🌍 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🔗 https://sakhanaufal.vercel.app/
 
-## Expanding the ESLint configuration
+## 👨‍💻 About Me
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+I’m a Frontend Developer passionate about building interactive, responsive, and user-friendly websites.
+My motto: "Just coding, keep growing."
+
+## 🚀 Tech Stack
+- [React + Vite](https://vitejs.dev/) – Framework and bundler for high performance  
+- [Tailwind CSS](https://tailwindcss.com/) – Utility-first CSS for responsive design  
+- [React Router](https://reactrouter.com/) – Page navigation  
+- [Framer Motion](https://www.framer.com/motion/) – Smooth and interactive animations  
+- [Shadcn/ui](https://ui.shadcn.com/) – Modern UI components  
+
+## ✨ Features
+- 📄 **Landing Page** – Brief introduction and tagline  
+- 🛠️ **Projects Section** – Showcase of my past projects  
+- 📚 **Skills Section** – List of tools and technologies I master  
+- 📬 **Contact Section** – Contact form and social links  
+- 🎨 **Responsive Design** – Works seamlessly on desktop and mobile  
+- ⚡ **Optimized Performance** – Built with Vite and Tailwind  
+
+## 📂 Project Structure
+```bash
+## 📂 Project Structure
+src/
+ ├── components/   # Reusable components
+ ├── pages/        # Main pages (Home, Projects, Contact)
+ ├── assets/       # Images & icons
+ ├── App.jsx       # React entry point
+ └── main.jsx      # Vite entry point
+
