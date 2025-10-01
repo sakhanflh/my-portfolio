@@ -93,6 +93,7 @@ export function About() {
             label: "Total Projects",
             description: "Innovative web solutions crafted",
             animation: "fade-right",
+            value: 8,
         },
         {
             icon: FaAward,
@@ -100,6 +101,7 @@ export function About() {
             label: "Certificates",
             description: "Professional skills validated",
             animation: "fade-up",
+            value: 2,
         },
         {
             icon: FaGlobe,
@@ -107,6 +109,7 @@ export function About() {
             label: "Years of Experience",
             description: "Continuous learning journey",
             animation: "fade-left",
+            value: "1",
         },
     ], []);
     return (

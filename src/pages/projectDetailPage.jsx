@@ -182,7 +182,7 @@ const ProjectDetailPage = () => {
 
                 {/* Gambar + fitur kanan */}
                 <div className="md:w-1/2">
-                    <div className="h-72 overflow-hidden rounded-lg mb-4 relative group">
+                    <div className="h-52 md:h-72 overflow-hidden rounded-lg mb-4 relative group">
                         <img
                             src={project.Img}
                             alt={project.Title}
