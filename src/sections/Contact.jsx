@@ -12,7 +12,7 @@ export function Contact() {
         src: "/mail.lottie",
         loop: true,
         autoplay: true,
-        rendererSettings: {
+        renderersettings: {
             preserveAspectRatio: 'xMidYMid slice',
             progressiveLoad: true,
         },

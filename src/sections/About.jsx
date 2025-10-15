@@ -2,8 +2,70 @@ import { LuArrowUpRight, LuSparkles } from "react-icons/lu";
 import { FaAward, FaCode, FaGlobe, FaQuoteLeft } from "react-icons/fa";
 import { LiaFileAltSolid } from "react-icons/lia";
 import { memo, useMemo } from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 export function About() {
+    const textRef = useRef(null);
+    const imageRef = useRef(null);
+    const statRefs = useRef([]);
+
+    useEffect(() => {
+        // Text masuk dari kiri
+        gsap.fromTo(
+            textRef.current,
+            { x: -100, opacity: 0 },
+            {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: textRef.current,
+                    start: "top 70%", // mulai animasi saat elemen 80% muncul di viewport
+                },
+            }
+        );
+
+        // Image masuk dari kanan
+        gsap.fromTo(
+            imageRef.current,
+            { x: 100, opacity: 0 },
+            {
+                x: 0,
+                opacity: 1,
+                duration: 1,
+                ease: "power3.out",
+                scrollTrigger: {
+                    trigger: imageRef.current,
+                    start: "top 70%",
+                },
+            }
+        );
+
+        // Stat cards muncul 1-1
+        statRefs.current.forEach((el, i) => {
+            gsap.fromTo(
+                el,
+                { y: 50, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    delay: i * 0.2, // animasi berurutan
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                    },
+                }
+            );
+        });
+    }, []);
+
+
     const ProfileImage = memo(() => (
         <div className="flex justify-end items-center sm:p-12 sm:py-0 sm:pb-0 p-0 py-2 pb-2">
             <div className="relative group">
@@ -114,7 +176,7 @@ export function About() {
     ], []);
     return (
         <div className="mt-20 " id="About">
-            <div className="text-center ">
+            <div  className="text-center ">
                 <h1 className="text-3xl md:text-5xl font-semibold gradient-text inline-block">About Me</h1>
                 <span className="flex items-center gap-2 text-center justify-center">
                     <LuSparkles className="text-purple-400" />
@@ -126,7 +188,7 @@ export function About() {
 
             <div className="mt-8 md:mt-20">
                 <div className="flex flex-col-reverse md:flex-row relative">
-                    <div className="w-full mt-10 md:mt-0 md:w-1/2">
+                    <div ref={textRef} className="w-full mt-10 md:mt-0 md:w-1/2">
                         <span className="text-3xl md:text-5xl text-start font-semibold">
                             <h2 className="gradient-text inline-block">Hello, I'm</h2>
                             <h2>Sakha Naufal Huda</h2>
@@ -166,7 +228,7 @@ export function About() {
                             </a>
                         </div>
                     </div>
-                    <div className="w-full md:w-1/2 flex justify-center">
+                    <div ref={imageRef} className="w-full md:w-1/2 flex justify-center">
                         <ProfileImage />
                     </div>
                 </div>

@@ -1,27 +1,49 @@
 import { DotLottieReact } from "@lottiefiles/dotlottie-react";
 import TextType from "../components/fragments/TextType";
-import { memo, useState } from "react";
+import { memo, useState, useEffect, useRef } from "react";
 import CTAButton from "../components/fragments/CTAButton";
-import { FaCode, FaDiscord, FaExternalLinkAlt, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaCode, FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 import { HiMail } from "react-icons/hi";
 import RotatingText from "../components/fragments/RotatingText";
 import { SiGmail } from "react-icons/si";
+import gsap from "gsap";
 
 export function Hero() {
-    const [isHovering, setIsHovering] = useState(false)
+    const [isHovering, setIsHovering] = useState(false);
+
+    // refs untuk gsap
+    const leftRef = useRef(null);
+    const rightRef = useRef(null);
+
+    useEffect(() => {
+        // kiri masuk dari kiri (-100)
+        gsap.fromTo(
+            leftRef.current,
+            { x: -200, opacity: 0 },
+            { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
+        );
+
+        // kanan masuk dari kanan (+100)
+        gsap.fromTo(
+            rightRef.current,
+            { x: 200, opacity: 0 },
+            { x: 0, opacity: 1, duration: 1, ease: "power3.out", delay: 0.3 }
+        );
+    }, []);
+
     const lottieOptions = {
         src: "/coding-slide.lottie",
         loop: true,
         autoplay: true,
-        rendererSettings: {
-            preserveAspectRatio: 'xMidYMid slice',
+        renderersettings: {
+            preserveAspectRatio: "xMidYMid slice",
             progressiveLoad: true,
         },
         style: { width: "100%", height: "100%" },
         className: `w-full h-full transition-all duration-500 ${isHovering
-            ? "scale-[180%] sm:scale-[160%] md:scale-[150%] lg:scale-[145%] rotate-2"
-            : "scale-[175%] sm:scale-[155%] md:scale-[145%] lg:scale-[140%]"
-            }`
+                ? "scale-[180%] sm:scale-[160%] md:scale-[150%] lg:scale-[145%] rotate-2"
+                : "scale-[175%] sm:scale-[155%] md:scale-[145%] lg:scale-[140%]"
+            }`,
     };
 
     const SocialLink = memo(({ icon: Icon, link }) => (
@@ -37,19 +59,25 @@ export function Hero() {
 
     const SOCIAL_LINKS = [
         { icon: FaGithub, link: "https://github.com/sakhanflh" },
-        { icon: FaLinkedin, link: "https://www.linkedin.com/in/sakha-naufal-huda-94996a242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
-        { icon: FaInstagram, link: "https://www.instagram.com/sakhanflh?igsh=MWx0a2pucWZ6b2E4eg==" },
-        { icon: SiGmail, link: "mailto:sakhanaufal2@gmail.com"},
+        {
+            icon: FaLinkedin,
+            link: "https://www.linkedin.com/in/sakha-naufal-huda-94996a242",
+        },
+        { icon: FaInstagram, link: "https://www.instagram.com/sakhanflh" },
+        { icon: SiGmail, link: "mailto:sakhanaufal2@gmail.com" },
     ];
 
-
     return (
-        <div className="flex mt-20  space-y-5 flex-col md:flex-row items-center md:justify-beetween" id="Home"> 
-            <div className="w-full md:w-1/2 space-y-5">
+        <div
+            className="flex mt-20 space-y-5 flex-col md:flex-row items-center md:justify-between"
+            id="Home"
+        >
+            {/* Bagian kiri */}
+            <div ref={leftRef} className="w-full md:w-1/2 space-y-5 opacity-0">
                 <div className="flex items-center gap-2">
                     <h2 className="font-semibold">Creative</h2>
                     <RotatingText
-                        texts={['Thinking', 'Coding', 'Solving', 'Implementation!']}
+                        texts={["Thinking", "Coding", "Solving", "Implementation!"]}
                         mainClassName="px-2 font-semibold sm:px-2 md:px-3 bg-violet-500 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
                         staggerFrom={"last"}
                         initial={{ y: "100%" }}
@@ -61,9 +89,15 @@ export function Hero() {
                         rotationInterval={3000}
                     />
                 </div>
-                <h1 className="text-6xl lg:text-7xl font-semibold">Frontend <br /> <span className="gradient-text">Developer</span></h1>
+                <h1 className="text-6xl lg:text-7xl font-semibold">
+                    Frontend <br /> <span className="gradient-text">Developer</span>
+                </h1>
                 <TextType
-                    text={["Let's Build the Future Together", "Transforming Ideas into Digital Reality", "Code Today, Inspire Tomorrow"]}
+                    text={[
+                        "Let's Build the Future Together",
+                        "Transforming Ideas into Digital Reality",
+                        "Code Today, Inspire Tomorrow",
+                    ]}
                     typingSpeed={75}
                     pauseDuration={1500}
                     showCursor={true}
@@ -93,7 +127,12 @@ export function Hero() {
                     ))}
                 </div>
             </div>
-            <div className="md:w-1/2 h-52 md:h-auto overflow-hidden flex justify-center w-full items-center">
+
+            {/* Bagian kanan */}
+            <div
+                ref={rightRef}
+                className="md:w-1/2 h-52 md:h-auto overflow-hidden flex justify-center w-full items-center opacity-0"
+            >
                 <div className="">
                     <DotLottieReact {...lottieOptions} />
                 </div>

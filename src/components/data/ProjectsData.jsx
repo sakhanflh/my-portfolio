@@ -40,19 +40,19 @@ export const projectsData = [
     },
     {
         id: 3,
-        Img: "/image/projects/Macbook-Air-senech-news.vercel.app.png",
-        Title: "Senech News",
-        Description: "Senech News is a news portal website that provides real-time updates by integrating APIs from CNN and Antara. Built with React and TailwindCSS to deliver a clean, responsive, and user-friendly reading experience.",
-        Link: "https://senech-news.vercel.app/",
-        Github: "https://github.com/sakhanflh/senech-news.git",
-        scroll: false,
+        Img: "/image/projects/Macbook-Air-radar-news.vercel.app.png",
+        Title: "Radar News",
+        Description: "Radar News is a news portal website that provides real-time updates by integrating APIs from CNN. Built with React and TailwindCSS to deliver a clean, responsive, and user-friendly reading experience.",
+        Link: "https://radar-news.vercel.app/",
+        Github: "https://github.com/sakhanflh/radar-news.git",
+        scroll: true,
         tech: [
             { techTitle: "React" },
             { techTitle: "TailwindCSS" },
         ],
         features: [
             "Real-time news updates",
-            "API integration with CNN and Antara",
+            "API integration with CNN",
             "Search and filter news articles",
             "Responsive and mobile-friendly design",
             "Modern UI for better readability"
@@ -121,12 +121,12 @@ export const projectsData = [
     },
     {
         id: 7,
-        Img: "/image/projects/Macbook-Air-transglobalindonesia.co.id.png",
+        Img: "/image/projects/Macbook-Air-langkahku-nine.vercel.app.png",
         Title: "Langkahku",
         Description: "Langkahku is a personal life management application that helps users organize finances, track daily transportation (ojek), manage tasks with a to-do list, and monitor mood patterns. Built with the MERN stack for seamless and responsive user experience.",
         Link: "https://langkahku-nine.vercel.app/",
         Github: "https://github.com/sakhanflh/langkahku.git",
-        scroll: true,
+        scroll: false,
         tech: [
             { techTitle: "React" },
             { techTitle: "TailwindCSS" },
@@ -166,4 +166,26 @@ export const projectsData = [
             "Responsive and user-friendly design"
         ],
     },
+    {
+        id: 9,
+        Img: "/image/projects/Macbook-Air-dashboard-ppmi-ochre.vercel.app.png",
+        Title: "Dashboard PT Pandi Proteksi Marine Indonesia",
+        Description:
+            "An internal dashboard system for PT Pandi Proteksi Marine Indonesia designed to monitor and manage marine protection operations. The platform provides real-time insights into vessel data, and client information with an intuitive and modern interface.",
+        scroll: false,
+        tech: [
+            { techTitle: "React" },
+            { techTitle: "TailwindCSS" },
+            { techTitle: "NodeJS" },
+            { techTitle: "ExpressJS" },
+            { techTitle: "MongoDB" },
+        ],
+        features: [
+            "Vessel and client data management",
+            "Real-time analytics and reports dashboard",
+            "User authentication and access control",
+            "Responsive and modern interface design"
+        ],
+    }
+    
 ];

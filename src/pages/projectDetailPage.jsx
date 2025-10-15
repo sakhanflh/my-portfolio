@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import {
-    FaArrowLeft, FaExternalLinkAlt, FaGithub, FaCode, FaStar,
+    FaArrowLeft, FaGithub, FaCode, FaStar,
     FaLayerGroup, FaThLarge, FaGlobe, FaBox, FaMicrochip, FaChevronRight
 } from "react-icons/fa";
+import { LuExternalLink } from "react-icons/lu";
+
 
 import { projectsData } from "../components/data/ProjectsData";
 
@@ -121,7 +123,7 @@ const ProjectDetailPage = () => {
                     <ProjectStats project={project} />
 
                     <div className="flex flex-wrap gap-4 mt-6">
-                        {project.Link && (
+                        {project.Link ? (
                             <a
                                 href={project.Link}
                                 target="_blank"
@@ -132,10 +134,18 @@ const ProjectDetailPage = () => {
                                 <span className="absolute inset-0 translate-y-full bg-gradient-to-r from-blue-600/20 to-purple-600/20 transition-transform duration-300 group-hover:translate-y-0 rounded-xl" />
 
                                 {/* Isi tombol */}
-                                <FaExternalLinkAlt className="relative w-4 h-4 md:w-5 md:h-5 group-hover:rotate-12 transition-transform" />
+                                <LuExternalLink className="relative w-4 h-4 md:w-5 md:h-5 group-hover:rotate-12 transition-transform" />
                                 <span className="relative font-medium">Live Demo</span>
                             </a>
 
+                        ) : (
+                            <button
+                                onClick={() => alert("Sorry, link for this project is private")}
+                                className="group relative flex items-center justify-center gap-2 px-4 md:px-8 py-2.5 md:py-4 bg-gradient-to-r from-blue-600/10 to-purple-600/10 hover:from-blue-600/20 hover:to-purple-600/20 text-blue-300 rounded-xl transition-all duration-300 border border-blue-500/20 hover:border-blue-500/40 backdrop-blur-xl overflow-hidden"
+                            >
+                                <LuExternalLink className="relative w-4 h-4 md:w-5 md:h-5 " />
+                                <span className="relative font-medium">Private</span>
+                            </button>
                         )}
                         {project.Github ? (
                             <a
@@ -154,10 +164,10 @@ const ProjectDetailPage = () => {
 
                         ) : (
                             <button
-                                onClick={() => alert("Maaf, source code untuk proyek ini privat.")}
+                                onClick={() => alert("Sorry, Source code for this project is private")}
                                 className="group relative inline-flex items-center space-x-1.5 md:space-x-2 px-4 md:px-8 py-2.5 md:py-4 bg-gradient-to-r from-purple-600/10 to-pink-600/10 hover:from-purple-600/20 hover:to-pink-600/20 text-purple-300 rounded-xl transition-all duration-300 border border-purple-500/20 hover:border-purple-500/40 backdrop-blur-xl overflow-hidden text-sm md:text-base"
                             >
-                                <FaGithub /> Private
+                                <FaGithub className="mr-2"/> Private
                             </button>
                         )}
                     </div>
