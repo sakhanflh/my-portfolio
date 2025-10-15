@@ -144,13 +144,13 @@ export const projectsData = [
     },
     {
         id: 8,
-        Img: "/image/projects/Macbook-Air-transglobalindonesia.co.id.png",
+        Img: "/image/projects/Macbook-Air-localhost (1).png",
         Title: "Penilaian Karyawan Terbaik di Tearas Kupu",
         Description:
             "A decision support system for evaluating and determining the best employees at Tearas Kupu. The system uses the Fuzzy Sugeno method to process performance criteria, making the assessment more objective, structured, and efficient.",
         Link: "https://penilaian-karyawan-terbaik.vercel.app/",
         Github: "https://github.com/sakhanflh/penilaian-karyawan-terbaik.git",
-        scroll: true,
+        scroll: false,
         tech: [
             { techTitle: "React" },
             { techTitle: "TailwindCSS" },
