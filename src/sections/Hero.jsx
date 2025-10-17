@@ -11,19 +11,16 @@ import gsap from "gsap";
 export function Hero() {
     const [isHovering, setIsHovering] = useState(false);
 
-    // refs untuk gsap
     const leftRef = useRef(null);
     const rightRef = useRef(null);
 
     useEffect(() => {
-        // kiri masuk dari kiri (-100)
         gsap.fromTo(
             leftRef.current,
             { x: -200, opacity: 0 },
             { x: 0, opacity: 1, duration: 1, ease: "power3.out" }
         );
 
-        // kanan masuk dari kanan (+100)
         gsap.fromTo(
             rightRef.current,
             { x: 200, opacity: 0 },
@@ -75,7 +72,7 @@ export function Hero() {
             {/* Bagian kiri */}
             <div ref={leftRef} className="w-full md:w-1/2 space-y-5 opacity-0">
                 <div className="flex items-center gap-2">
-                    <h2 className="font-semibold">Creative</h2>
+                    <p className="font-semibold">Creative</p>
                     <RotatingText
                         texts={["Thinking", "Coding", "Solving", "Implementation!"]}
                         mainClassName="px-2 font-semibold sm:px-2 md:px-3 bg-violet-500 text-white overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
@@ -89,9 +86,9 @@ export function Hero() {
                         rotationInterval={3000}
                     />
                 </div>
-                <h1 className="text-6xl lg:text-7xl font-semibold">
+                <p className="text-6xl lg:text-7xl font-semibold">
                     Frontend <br /> <span className="gradient-text">Developer</span>
-                </h1>
+                </p>
                 <TextType
                     text={[
                         "Let's Build the Future Together",
@@ -128,7 +125,6 @@ export function Hero() {
                 </div>
             </div>
 
-            {/* Bagian kanan */}
             <div
                 ref={rightRef}
                 className="md:w-1/2 h-52 md:h-auto overflow-hidden flex justify-center w-full items-center opacity-0"

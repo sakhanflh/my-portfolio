@@ -13,7 +13,6 @@ export function About() {
     const statRefs = useRef([]);
 
     useEffect(() => {
-        // Text masuk dari kiri
         gsap.fromTo(
             textRef.current,
             { x: -100, opacity: 0 },
@@ -24,12 +23,11 @@ export function About() {
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: textRef.current,
-                    start: "top 70%", // mulai animasi saat elemen 80% muncul di viewport
+                    start: "top 70%",
                 },
             }
         );
 
-        // Image masuk dari kanan
         gsap.fromTo(
             imageRef.current,
             { x: 100, opacity: 0 },
@@ -45,7 +43,6 @@ export function About() {
             }
         );
 
-        // Stat cards muncul 1-1
         statRefs.current.forEach((el, i) => {
             gsap.fromTo(
                 el,
@@ -54,7 +51,7 @@ export function About() {
                     y: 0,
                     opacity: 1,
                     duration: 0.8,
-                    delay: i * 0.2, // animasi berurutan
+                    delay: i * 0.2,
                     ease: "power3.out",
                     scrollTrigger: {
                         trigger: el,
@@ -69,7 +66,6 @@ export function About() {
     const ProfileImage = memo(() => (
         <div className="flex justify-end items-center sm:p-12 sm:py-0 sm:pb-0 p-0 py-2 pb-2">
             <div className="relative group">
-                {/* Background gradients (desktop only) */}
                 <div className="absolute -inset-6 opacity-[25%] z-0 hidden sm:block">
                     <div className="absolute inset-0 bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 rounded-full blur-2xl animate-spin-slower pointer-events-none" />
                     <div className="absolute inset-0 bg-gradient-to-l from-fuchsia-500 via-rose-500 to-pink-600 rounded-full blur-2xl animate-pulse-slow opacity-50 pointer-events-none" />
@@ -77,22 +73,18 @@ export function About() {
                 </div>
 
                 <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] transform transition-all duration-700 group-hover:scale-105">
-                    {/* Border effect */}
                     <div className="absolute inset-0 border-4 border-white/20 rounded-full z-20 transition-all duration-700 group-hover:border-white/40 group-hover:scale-105 pointer-events-none" />
 
-                    {/* Overlay effects (desktop only) */}
                     <div className="absolute inset-0 rounded-full bg-gradient-to-b from-black/20 via-transparent to-black/40 z-10 transition-opacity duration-700 group-hover:opacity-0 hidden sm:block pointer-events-none" />
                     <div className="absolute inset-0 rounded-full bg-gradient-to-t from-purple-500/20 via-transparent to-blue-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block pointer-events-none" />
 
-                    {/* Profile image */}
                     <img
                         src="/image/sak.jpg"
-                        alt="Profile"
+                        alt="Sakha Naufal Huda"
                         className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
                         loading="lazy"
                     />
 
-                    {/* Advanced hover effects - desktop only */}
                     <div className="absolute inset-0 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 z-20 hidden sm:block pointer-events-none">
                         <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                         <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-transparent via-white/10 to-transparent transform translate-y-full group-hover:-translate-y-full transition-transform duration-1000 delay-100" />
@@ -190,14 +182,13 @@ export function About() {
                 <div className="flex flex-col-reverse md:flex-row relative">
                     <div ref={textRef} className="w-full mt-10 md:mt-0 md:w-1/2">
                         <span className="text-3xl md:text-5xl text-start font-semibold">
-                            <h2 className="gradient-text inline-block">Hello, I'm</h2>
-                            <h2>Sakha Naufal Huda</h2>
+                            <p className="gradient-text inline-block">Hello, I'm</p>
+                            <p>Sakha Naufal Huda</p>
                         </span>
                         <p className="text-justify text-xl text-slate-400">I am an Informatics Engineering graduate with a strong interest in Front-End development. My focus is on creating engaging, responsive, and user friendly digital experiences, while always striving to deliver the best solutions in every project I work on.</p>
                         <div
                             className="relative bg-gradient-to-br from-purple-500/5 via-transparent to-cyan-500/5 border border-gradient-to-r border-[#6366f1]/30 rounded-2xl p-4 my-6 backdrop-blur-md shadow-2xl overflow-hidden"
                         >
-                            {/* Floating orbs background */}
                             <div className="absolute top-2 right-4 w-16 h-16 bg-gradient-to-r from-[#6366f1]/20 to-[#a855f7]/20 rounded-full blur-xl"></div>
                             <div className="absolute -bottom-4 -left-2 w-12 h-12 bg-gradient-to-r from-[#a855f7]/20 to-[#6366f1]/20 rounded-full blur-lg"></div>
 

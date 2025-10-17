@@ -48,9 +48,9 @@ export function Contact() {
             <div
                 className="text-center pb-10"
             >
-                <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto gradient-text">
+                <h4 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto gradient-text">
                     Contact Me
-                </h2>
+                </h4>
                 <p className="text-slate-400 max-w-2xl mx-auto mt-2">
                     Have something to discuss? Send me a message and let's talk.
                 </p>
@@ -62,9 +62,9 @@ export function Contact() {
                 >
                     <div className="flex justify-between items-start mb-8">
                         <div>
-                            <h2 className="text-3xl md:text-4xl font-bold mb-3 gradient-text inline-block">
+                            <p className="text-3xl md:text-4xl font-bold mb-3 gradient-text inline-block">
                                 Get in touch.
-                            </h2>
+                            </p>
                             <p className="text-gray-400 text-sm md:text-base">
                                 Anything you'd like to discuss? Send me a message and let's talk.
                             </p>

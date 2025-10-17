@@ -62,13 +62,12 @@ export function Portfolio() {
             className="w-full mt-32"
             id="Portfolio"
         >
-            {/* Header */}
             <div
                 className="text-center pb-10"
             >
-                <h2 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto gradient-text">
+                <h3 className="inline-block text-3xl md:text-5xl font-bold text-center mx-auto gradient-text">
                     Portfolio Showcase
-                </h2>
+                </h3>
                 <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base mt-2">
                     Explore my journey through projects, certifications, and technical
                     expertise. Each section represents a milestone in my continuous
@@ -76,7 +75,6 @@ export function Portfolio() {
                 </p>
             </div>
 
-            {/* Tabs */}
             <div className="flex justify-center md:gap-4 mb-8">
                 {[
                     { icon: <FaCode />, label: "Projects" },
@@ -97,7 +95,6 @@ export function Portfolio() {
                 ))}
             </div>
 
-            {/* Tab Panels */}
             {activeTab === 0 && (
                 <div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
