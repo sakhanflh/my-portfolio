@@ -1,6 +1,6 @@
 export const projectsData = [
     {
-        id: 1,
+        id: "josha-coffee",
         Img: "/image/projects/Macbook-Air-josha-coffe.vercel.app.png",
         Title: "Josha Coffe",
         Description:
@@ -20,7 +20,7 @@ export const projectsData = [
         ],
     },
     {
-        id: 2,
+        id: "portfolio-v1",
         Img: "/image/projects/Macbook-Air-portfoliosakha.vercel.app.png",
         Title: "Portfolio V1",
         Description:
@@ -39,7 +39,7 @@ export const projectsData = [
         ],
     },
     {
-        id: 3,
+        id: "radar-news",
         Img: "/image/projects/Macbook-Air-radar-news.vercel.app.png",
         Title: "Radar News",
         Description: "Radar News is a news portal website that provides real-time updates by integrating APIs from CNN. Built with React and TailwindCSS to deliver a clean, responsive, and user-friendly reading experience.",
@@ -59,7 +59,7 @@ export const projectsData = [
         ],
     },
     {
-        id: 4,
+        id: "buildong",
         Img: "/image/projects/Macbook-Air-buildong-pi.vercel.app.png",
         Title: "Buildong",
         Description:
@@ -82,7 +82,7 @@ export const projectsData = [
         ],
     },
     {
-        id: 5,
+        id: "hyundai-sales",
         Img: "/image/projects/Macbook-Air-hyundai-sales.vercel.app.png",
         Title: "Hyundai Sales",
         Description: "A car sales website built for Hyundai Cibubur to support sales agents in promoting vehicles, highlighting product details, and reaching more customers online. Developed with React and TailwindCSS, the site is optimized for SEO and responsive design to boost customer engagement and increase sales.",
@@ -101,7 +101,7 @@ export const projectsData = [
         ],
     },
     {
-        id: 6,
+        id: "transglobal",
         Img: "/image/projects/Macbook-Air-transglobalindonesia.co.id.png",
         Title: "PT. Transglobal Indonesia Consultant",
         Description: "A company profile website for PT. Transglobal Indonesia Consultant, showcasing the company’s background, services, and contact information. Built with React and TailwindCSS to provide a modern, responsive, and professional user experience.",
@@ -120,7 +120,7 @@ export const projectsData = [
         ],
     },
     {
-        id: 7,
+        id: "langkahku",
         Img: "/image/projects/Macbook-Air-langkahku-nine.vercel.app.png",
         Title: "Langkahku",
         Description: "Langkahku is a personal life management application that helps users organize finances, track daily transportation (ojek), manage tasks with a to-do list, and monitor mood patterns. Built with the MERN stack for seamless and responsive user experience.",
@@ -143,7 +143,7 @@ export const projectsData = [
         ],
     },
     {
-        id: 8,
+        id: "spk",
         Img: "/image/projects/Macbook-Air-localhost (1).png",
         Title: "Penilaian Karyawan Terbaik di Tearas Kupu",
         Description:
@@ -167,7 +167,7 @@ export const projectsData = [
         ],
     },
     {
-        id: 9,
+        id: "dashboard-pandi",
         Img: "/image/projects/Macbook-Air-dashboard-ppmi-ochre.vercel.app.png",
         Title: "Dashboard PT Pandi Proteksi Marine Indonesia",
         Description:
