@@ -4,7 +4,7 @@ export const projectsData = [
         Img: "/image/projects/Macbook-Air-josha-coffe.vercel.app.png",
         Title: "Josha Coffe",
         Description:
-        "Josha Coffee is my first collaborative project developed as a college assignment. It is a simple coffee shop website built using vanilla JavaScript, HTML, and CSS to practice basic web development concepts.",
+            "Josha Coffee is my first collaborative project developed as a college assignment. It is a simple coffee shop website built using vanilla JavaScript, HTML, and CSS to practice basic web development concepts.",
         Link: "https://josha-coffe.vercel.app/",
         Github: "https://github.com/username/josha-coffe",
         scroll: true,
@@ -24,7 +24,7 @@ export const projectsData = [
         Img: "/image/projects/Macbook-Air-portfoliosakha.vercel.app.png",
         Title: "Portfolio V1",
         Description:
-        "Portfolio V1 is the earlier version of my personal portfolio website, showcasing my projects and skills as a Frontend Developer. Built with React and TailwindCSS, it features a clean design and responsive layout.",
+            "Portfolio V1 is the earlier version of my personal portfolio website, showcasing my projects and skills as a Frontend Developer. Built with React and TailwindCSS, it features a clean design and responsive layout.",
         Link: "https://portfoliosakha.vercel.app/",
         Github: "https://github.com/sakhanflh/portfolio-react-v2.git",
         scroll: true,
@@ -101,7 +101,7 @@ export const projectsData = [
         ],
     },
     {
-        id: "transglobal",
+        id: "compro-transglobal",
         Img: "/image/projects/Macbook-Air-transglobalindonesia.co.id.png",
         Title: "PT. Transglobal Indonesia Consultant",
         Description: "A company profile website for PT. Transglobal Indonesia Consultant, showcasing the company’s background, services, and contact information. Built with React and TailwindCSS to provide a modern, responsive, and professional user experience.",
@@ -167,6 +167,29 @@ export const projectsData = [
         ],
     },
     {
+        id: "compro-pandi",
+        Img: "/image/projects/Macbook-Air-pandiproteksi.com.png",
+        Title: "Company Profile PT Pandi Proteksi Marine Indonesia",
+        Description:
+            "A company profile website for PT Pandi Proteksi Marine Indonesia, showcasing the company's marine protection services, team, projects, and client portfolio. The platform provides an informative and visually appealing presentation of the company's identity and offerings.",
+        Link: "https://pandiproteksi.com/",
+        scroll: true,
+        tech: [
+            { techTitle: "React" },
+            { techTitle: "TailwindCSS" },
+            { techTitle: "NodeJS" },
+            { techTitle: "ExpressJS" },
+            { techTitle: "MongoDB" },
+        ],
+        features: [
+            "Detailed company profile showcasing services and expertise",
+            "Projects and client portfolio presentation",
+            "Team introduction and company values",
+            "Responsive and modern design for web browsing",
+            "Contact information and inquiry form"
+        ],
+    },
+    {
         id: "dashboard-pandi",
         Img: "/image/projects/Macbook-Air-dashboard-ppmi-ochre.vercel.app.png",
         Title: "Dashboard PT Pandi Proteksi Marine Indonesia",
@@ -186,6 +209,6 @@ export const projectsData = [
             "User authentication and access control",
             "Responsive and modern interface design"
         ],
-    }
-    
+    },
+
 ];

@@ -147,7 +147,7 @@ export function About() {
             label: "Total Projects",
             description: "Innovative web solutions crafted",
             animation: "fade-right",
-            value: 9,
+            value: 10,
         },
         {
             icon: FaAward,
