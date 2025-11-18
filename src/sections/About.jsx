@@ -201,7 +201,7 @@ export function About() {
                             </blockquote>
                         </div>
                         <div className="flex flex-col lg:flex-row items-center lg:items-start gap-4 lg:gap-4 lg:px-0 w-full">
-                            <a href="https://drive.google.com/file/d/1FdVJg10dc-szTwXMZxqNGoJjnN41hCqs/view?usp=drive_link" className="w-full lg:w-auto">
+                            <a href="https://drive.google.com/file/d/1VuavcSoOrmec6ohI6pNXKCE4pg_yVhvo/view?usp=drive_link" className="w-full lg:w-auto">
                                 <button
                                     className="w-full lg:w-auto sm:px-6 py-2 sm:py-3 rounded-lg bg-gradient-to-r from-purple-500/70 to-cyan-600/70 text-white font-medium transition-all duration-300 hover:scale-105 flex items-center justify-center lg:justify-start gap-2 shadow-lg hover:shadow-xl "
                                 >
